@@ -14,8 +14,9 @@ namespace MVCPratice.Models
     
     public partial class test
     {
-        public string ID { get; set; }
-        public string CDE { get; set; }
-        public string NAM { get; set; }
+        public long ID { get; set; }
+        public string nam { get; set; }
+        public string mail { get; set; }
+        public string message { get; set; }
     }
 }

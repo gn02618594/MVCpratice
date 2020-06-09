@@ -4,24 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>問題反應單</h2>
 
 <p>
     <input type="button" value="新增表單" onclick="location.href='@Url.Action("Create")'">
-    <!--@Html.ActionLink("Create New", "Create")-->
+    <!------@Html.ActionLink("Create New", "Create")--->
 </p>
-<!----><table class="table">
+<table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CDE)
+           <label>員工代號</label>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NAM)
         </th>
         <th></th>
-    </tr>-->
+    </tr>
 
-<!----@foreach (var item in Model) {
+@foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.CDE)
@@ -29,12 +29,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.NAM)
         </td>
-        <td>
+        <!---- <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+        </td>-->
     </tr>
-}-->
+    }
 
 </table>

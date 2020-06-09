@@ -9,9 +9,10 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CDE" Type="nvarchar" MaxLength="50" />
-          <Property Name="NAM" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nam" Type="nvarchar" MaxLength="50" />
+          <Property Name="mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="message" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="ProgrammingTestModelStoreContainer">
           <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
@@ -27,9 +28,10 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CDE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NAM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -40,8 +42,9 @@
           <EntitySetMapping Name="test">
             <EntityTypeMapping TypeName="ProgrammingTestModel.test">
               <MappingFragment StoreEntitySet="test">
-                <ScalarProperty Name="NAM" ColumnName="NAM" />
-                <ScalarProperty Name="CDE" ColumnName="CDE" />
+                <ScalarProperty Name="message" ColumnName="message" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="nam" ColumnName="nam" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
