@@ -46,13 +46,13 @@ namespace MVCPratice.Controllers
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,CDE,NAM")] test test)
+        public ActionResult Create([Bind(Include = "ID,NAM,MAIL,MESSAGE")] test test)
         {
             if (ModelState.IsValid)
             {
                 db.test.Add(test);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
 
             return View(test);
